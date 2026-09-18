@@ -12,6 +12,7 @@ export interface User {
   nombreCompleto: string;
   email: string;
   role: 'Administrador' | 'Aprendiz' | 'Instructor';
+  ficha: string;
 }
 
 interface AuthContextType {

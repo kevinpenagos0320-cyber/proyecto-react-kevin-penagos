@@ -31,6 +31,7 @@ import NuevoEquipoPage from "../src/pages/NuevoEquipoPages/NuevoEquipoPages";
 import DetalleEquipoPage from "./pages/DetalleEquipoPage/DetalleEquipoPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import ProtectedRoute from "./routes/ProtectedRoute";
+import PrestamosPage from "./pages/PrestamosPage/PrestamosPage";
 // 🛡️ Importamos la guardia de seguridad
 
 
@@ -48,8 +49,9 @@ export default function App() {
       <Route element={<ProtectedRoute />}>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Navigate to="/dashboard" replace />} />
-          <Route path="dashboard" element={<DashboardPage />} />
-          <Route path="inventario" element={<EquiposPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/inventario" element={<EquiposPage />} />
+          <Route path="/prestamos" element={<PrestamosPage />} />
 
           {/* 3. Nivel 2 de Protección (RBAC): Exclusivo para el rol 'Administrador' */}
           <Route element={<ProtectedRoute requiredRole="Administrador" />}>

@@ -15,6 +15,12 @@ export default function Navbar() {
           className={({ isActive }) => isActive ? 'nav-active' : 'nav-item'}>
           💻 Inventario
         </NavLink>
+        <NavLink 
+          to="/prestamos" 
+          className={({ isActive }) => isActive ? 'nav-active' : 'nav-item'}>
+          💻 Prestamos 
+        </NavLink>     
+      
       </nav>
     </header>
   );
